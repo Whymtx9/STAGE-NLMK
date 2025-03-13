@@ -2,12 +2,12 @@
       L     #durete_toles
       L     0
       <I    
-      BEB                               // Si dureté < 0, on saute vers la gestion d'erreur
+      BEB                               // Si dureté < 0, on saute vers la recette universelle (7)
 
       L     #durete_toles
       L     600
       >I    
-      SPBN  S001                        // Si dureté > 600, on saute vers la gestion d'erreur
+      SPBN  S001                        // Si dureté > 600, on saute vers la recette universelle (7)
       L     7
       T     #recette_dur
 
