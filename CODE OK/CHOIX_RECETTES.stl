@@ -1,0 +1,65 @@
+// Vérification de la validité de la dureté (doit être entre 0 et 600)
+      L     #durete_toles
+      L     0
+      <I    
+      BEB                               // Si dureté < 0, on saute vers la gestion d'erreur
+
+      L     #durete_toles
+      L     600
+      >I    
+      SPBN  S001                        // Si dureté > 600, on saute vers la gestion d'erreur
+      L     7
+      T     #recette_dur
+
+      SPA   END
+
+
+// Initialisation des variables
+S001: L     DW#16#10                    // Adresse de départ dans le DB 73
+      T     #pointeur_durete
+      L     1
+      T     #comptage                   // Numérotation des recettes (1 à 6)
+      L     7
+      T     #recette_dur                // Recette universelle par défaut
+
+// Initialisation compteur de boucle
+      L     6
+      T     #compteur
+
+
+// Boucle de recherche de la recette
+M001: AUF   "TEST_SWERTS_RECETTES"      // Ouvre le DB contenant les recettes
+      L     #durete_toles
+      L     DBW [#pointeur_durete]      // Charge la dureté de la recette actuelle
+      ==I   
+      SPBN  M002                        // Si ce n'est pas égal, continue la boucle
+
+      L     #comptage
+      T     #recette_dur                // Stocke la recette trouvée
+      SPA   END                         // Quitte la boucle, recette trouvée
+
+// Incrémentation de 54 bytes pour pointer la recette suivante
+M002: L     #pointeur_durete
+      L     432
+      +I    
+      T     #pointeur_durete
+
+// Incrémentation du compteur de recettes
+      L     #comptage
+      L     1
+      +I    
+      T     #comptage
+
+// Vérifie si on a testé les 6 recettes
+      L     #comptage
+      L     6
+      >I    
+      SPBN  M001                        // Si on n'a pas dépassé 6, on boucle
+
+// Si aucune recette trouvée, la recette 7 (universelle) reste sélectionnée
+
+END:  L     #recette_dur
+      T     #num_recette
+      L     #durete_toles
+      T     #PourToleDe
+      BE    
