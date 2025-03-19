@@ -5,7 +5,7 @@
 - [ ] Code copie de DB recette de base vers DB d'édition (valeur sur HMI)
 - [x] DB recettes édition (copie DB70) --> la mienne = DB76
 - [x] DB recettes turbines (copie DB71) --> la mienne = DB73
-- [ ] DB recettes turbines en cours (voir si je peux utiliser la même (copie DB72))
+- [x] DB recettes turbines en cours (voir si je peux utiliser la même (copie DB72))
 ## Dossier TFE et pré-jury
 - [x] Doc PDF du pré-jury 
 - [ ] Vidéo pré-jury
