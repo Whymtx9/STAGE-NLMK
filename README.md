@@ -7,7 +7,7 @@
 - [x] DB recettes turbines (copie DB71) --> la mienne = DB73
 - [ ] DB recettes turbines en cours (voir si je peux utiliser la même (copie DB72))
 ## Dossier TFE et pré-jury
-- [x] Doc PDF du pré-jury
+- [x] Doc PDF du pré-jury 
 - [ ] Vidéo pré-jury
 - [ ] Montage vidéo pré-jury
 - [x] Gantt TFE à mettre en annexe
