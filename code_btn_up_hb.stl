@@ -1,0 +1,9 @@
+IF (StringCompare( StringLeft("durete_theorique", 7 ) , "Galaxy:" ) == 0) THEN
+    durete_theorique = durete_theorique + 10.0000;
+ELSE 
+    IF durete_theorique + 10.0000 <= durete_theorique.MaxEU THEN
+        durete_theorique = durete_theorique + 10.0000;
+    ELSE
+        durete_theorique = durete_theorique.MaxEU;
+    ENDIF;
+ENDIF;

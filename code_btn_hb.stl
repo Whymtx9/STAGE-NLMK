@@ -1,9 +1,0 @@
-IF (StringCompare( StringLeft("NumRecetteEditeeDemandee", 7 ) , "Galaxy:" ) == 0) THEN
-    NumRecetteEditeeDemandee = NumRecetteEditeeDemandee + 1.0000;
-ELSE 
-    IF NumRecetteEditeeDemandee + 1.0000 <= NumRecetteEditeeDemandee.MaxEU THEN
-        NumRecetteEditeeDemandee = NumRecetteEditeeDemandee + 1.0000;
-    ELSE
-        NumRecetteEditeeDemandee = NumRecetteEditeeDemandee.MaxEU;
-    ENDIF;
-ENDIF;
