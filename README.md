@@ -7,6 +7,10 @@
 - [x] DB recettes turbines (copie DB71) --> la mienne = DB73
 - [x] DB recettes turbines en cours (voir si je peux utiliser la même (copie DB72))
 - Voir si tout les codes sont ok et en concordance avec OB1 puis test sur maquette, si validé go ligne
+## Code HMI
+- [x] TEXTE
+- [x] Boutons
+- [ ] Chiffres
 ## Dossier TFE et pré-jury
 - [x] Doc PDF du pré-jury 
 - [x] Vidéo pré-jury
