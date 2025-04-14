@@ -19,6 +19,11 @@
 - [x]  Ppt complet pré-jury
 - [x]  Titre du TFE
 - [ ]  PDF final
+  - [x] page de garde
+  - [x] décla ia
+  - [x] résumé anglais
+  - [ ] planif du reste
+  - [ ] fin de chapitre, remerciements, péface
 - [ ]  Vidéo finale
 - [ ]  Montage vidéo finale
 - [ ]  Ppt final
