@@ -24,7 +24,6 @@
   - [x] résumé anglais
   - [x] remerciements
   - [ ] planif du reste
-  - [ ] fin de chapitre, remerciements, péface
 - [ ]  Vidéo finale
 - [ ]  Montage vidéo finale
 - [ ]  Ppt final
