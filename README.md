@@ -10,7 +10,7 @@
 ## Code HMI
 - [x] TEXTE
 - [x] Boutons
-- [ ] Chiffres
+- [x] Chiffres
 ## Dossier TFE et pré-jury
 - [x] Doc PDF du pré-jury 
 - [x] Vidéo pré-jury
@@ -22,6 +22,7 @@
   - [x] page de garde
   - [x] décla ia
   - [x] résumé anglais
+  - [x] remerciements
   - [ ] planif du reste
   - [ ] fin de chapitre, remerciements, péface
 - [ ]  Vidéo finale
