@@ -1,0 +1,70 @@
+//VERIFICATION SI VALEUR ENTREE 1 ET 7
+
+      L     #RECETTE_source
+      L     0
+      <=I   
+      BEB   
+      L     #RECETTE_source
+      L     14
+      >I    
+      BEB   
+//CALCUL POS RECETTE SOURCE ET CONVERSION EN POINTEUR
+
+      L     #RECETTE_source
+      L     1
+      -I    
+      L     54
+      *I    
+
+      SLW   3                           //conversion en octets
+      T     #PointeurSource_matt
+
+//INITIALISATION POINTEUR DE DESTINATION
+
+      L     DW#16#90                    //DB75.DBW18 !!! binaire les trois 0
+      T     #POINTEURDESTINATION
+
+//BOUCLE LONGUEUR DE RECETTE
+
+      L     54
+M001: T     #COMPTEUR_RECETTE
+
+//CHARGER DB SOURCE VALEUR
+
+      AUF   "RECETTES_DURETE"
+      L     DBB [#PointeurSource_matt]
+      T     #tempon
+
+//TRANSFERT VERS DB DESTINATION
+
+      AUF   "recette_durete_encours"
+      L     #tempon
+      T     DBB [#POINTEURDESTINATION]
+
+//INCREMENTATION D'UNE POSITION BYTE ET PAS MODIF VAL POINTEUR
+
+      L     #PointeurSource_matt
+      L     8
+      +I    
+      T     #PointeurSource_matt
+
+//INCREMENTATION D'UNE POSITION BYTE ET PAS MODIF VAL POINTEUR
+
+      L     #POINTEURDESTINATION
+      L     8
+      +I    
+      T     #POINTEURDESTINATION
+
+      L     #COMPTEUR_RECETTE
+      LOOP  M001
+
+      BE    
+
+
+
+
+
+
+
+
+
